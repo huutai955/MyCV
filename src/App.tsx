@@ -3,11 +3,18 @@ import reactLogo from './assets/react.svg'
 import { AiOutlineGithub, AiFillInstagram, AiFillFacebook, AiOutlineMenuUnfold, AiOutlineClose } from "react-icons/ai";
 import { Button, Drawer } from 'antd';
 import { Fade, Slide,Flip } from "react-awesome-reveal";
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import ScrollToTop from "react-scroll-to-top";
+
+
 
 
 
 function App() {
+  const [opacity, setOpacity] = useState<number>(1)
   const [open, setOpen] = useState(false);
+  const [height, setHeight] = useState<number>(1)
+
 
   const showDrawer = () => {
     setOpen(true);
@@ -16,6 +23,24 @@ function App() {
   const onClose = () => {
     setOpen(false);
   };
+
+  const changeHeight = (e: Event) => {
+    setHeight(window.scrollY)
+  }
+
+  useEffect(() => {
+    if (height >= 100) {
+      setOpacity(1)
+    }else {
+      setOpacity(0)
+    }
+  },[height])
+  useEffect(() => {
+    window.addEventListener('scroll', changeHeight)
+    return () => {
+      window.removeEventListener('scroll', changeHeight);
+    }
+  }, [])
 
 
   return (
@@ -218,6 +243,7 @@ function App() {
         </div>
       </div>
 
+      <ScrollToTop smooth style={{right: 100}} />
       <div className="social flex flex-col items-center fixed left-10 bottom-0 after:content-[''] after:h-28 after:w-1 after:bg-grey-custom2 max-[992px]:hidden">
         <a href="https://github.com/huutai955" target={'_blank'}><AiOutlineGithub className='text-2xl text-grey-custom2 mb-3' /></a>
         <a href="https://www.instagram.com/ihatetaiiiii0702" target={'_blank'}><AiFillInstagram className='text-2xl text-grey-custom2 mb-3' /></a>
