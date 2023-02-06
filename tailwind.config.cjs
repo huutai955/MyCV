@@ -26,7 +26,7 @@ module.exports = {
         'carousel': "url('https://huuhienqt.dev/wp-content/themes/monst/assets/imgs/placeholders/img-15.jpeg)",
       },
       spacing: {
-        '355px':"355px",
+        '400px':"400px",
         '33%': '33%'
       }
     },

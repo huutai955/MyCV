@@ -132,10 +132,10 @@ function App() {
           <div className="project1 flex relative mb-40 items-center py-24">
             <Slide direction='left' className='basis-2/3 relative max-[992px]:basis-full'>
               <div >
-                <img src="./img/project1.png" className='max-[680px]:h-355px' alt="" />
+                <img src="./img/project1.png" className='max-[680px]:h-400px' alt="" />
                 <a href="https://nguyen-huu-tai-bootcamp33-typescript-capstone.vercel.app/" target={'_blank'} className='absolute top-0 right-0 left-0 bottom-0 opacity-70 hover:opacity-0 duration-700 max-[992px]:hidden' style={{ backgroundColor: '#1d4652' }}></a>
                 {/* Mobile */}
-                <a href='facebook.com' className='absolute bg-navy hidden top-0 bottom-0 right-0 left-0 max-[992px]:block p-2'>
+                <a href='https://vercel.com/huutai955/nguyen-huu-tai-bootcamp33-typescript-capstone' target={'_blank'} className='absolute bg-navy hidden top-0 bottom-0 right-0 left-0 max-[992px]:block p-2'>
                   <p className='text-hover-color'>Featured Project</p>
                   <h2 className='text-grey-custom text-2xl'>Jira Clone Project</h2>
                   <p className='text-grey-custom2'>Here is my project to finish the course at CyberSoft.I made some features like creating the project and controlling the project's tasks.You can check some features in project with this account:  <br /> email: tainguyentestjira1@gmail.com
@@ -146,6 +146,7 @@ function App() {
                       <li className='text-grey-custom'>ReactJS</li>
                       <li className='text-grey-custom'>Antd</li>
                       <li className='text-grey-custom'>Sass</li>
+                      <li className='text-grey-custom'>TypeScript</li>
                     </ul>
                     <ul className='basis1/3'>
                       <li className='text-grey-custom'>Redux (Redux-toolkit)</li>
@@ -209,12 +210,12 @@ function App() {
             </Slide>
             <Slide direction='right' className='basis-2/3 relative max-[992px]:basis-full max-[992px]:left-0 max-[992px]:w-full left-33%'>
               <div >
-                <img src="./img/project2.png" className='max-[680px]:h-355px' alt="" />
-                <a href="" className='absolute top-0 right-0 left-0 bottom-0 opacity-70 hover:opacity-0 duration-700' style={{ backgroundColor: '#1d4652' }}></a>
+                <img src="./img/project2.png" className='max-[680px]:h-400px' alt="" />
+                <a href="https://nguyen-huu-tai-type-script-fiverr.vercel.app/" target={'_blank'} className='absolute top-0 right-0 left-0 bottom-0 opacity-70 hover:opacity-0 duration-700' style={{ backgroundColor: '#1d4652' }}></a>
                 {/* Mobile */}
-                <a href='facebook.com' className='absolute bg-navy hidden top-0 bottom-0 right-0 left-0 max-[992px]:block p-2'>
+                <a href='https://nguyen-huu-tai-type-script-fiverr.vercel.app/' target={'_blank'} className='absolute bg-navy hidden top-0 bottom-0 right-0 left-0 max-[992px]:block p-2'>
                   <p className='text-hover-color'>Featured Project</p>
-                  <h2 className='text-grey-custom text-2xl'>Jira Clone Project</h2>
+                  <h2 className='text-grey-custom text-2xl'>Fiverr Clone Project</h2>
                   <p className='text-grey-custom2'>Here is my project to finish the course at CyberSoft.I made some features like creating the project and controlling the project's tasks.You can check some features in project with this account:  <br /> email: tainguyentestjira1@gmail.com
                     <br /> password: 123456</p>
                   <h2 className=' 992px:text-base 1024px:text-xl font-medium text-grey-custom'>A few libraries and frameworks that I use in this project: </h2>
@@ -238,6 +239,21 @@ function App() {
         </div>
       </div>
 
+      <div className="certificate bg-dark-navy py-20">
+      <Fade delay={500}>
+          <div className="container">
+            <h2 className='text-4xl text-grey-custom font-bold  mb-10'>My Certificate.</h2>
+            <div className='flex items-center max-[992px]:flex-col-reverse'>
+              <div className='basis-1/2'>
+                <img src="./img/certificate.png" className='w-full' alt="" />
+              </div>
+              <div className='basis-1/2 pr-6 max-[992px]:pr-0 max-[992px]:mb-5 max-[992px]:text-2xl'>
+                <p className='text-grey-custom2 text-2xl'>Although it doesn't bring too many values like a university certificate. But it shows how I tried when I began to learn about front-end development.  I am proud of it.  And As well as it is a good start in the road to being a good developer</p>
+              </div>
+            </div>
+          </div>
+      </Fade>
+      </div>
 
       <div ref={elementRefContact} className="contact bg-dark-navy px-24 py-24 max-[768px]:px-2">
         <div className="container max-[768px]:px-2 text-grey-custom text-end" >
