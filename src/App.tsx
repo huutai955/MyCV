@@ -248,7 +248,7 @@ function App() {
                 <img src="./img/certificate.png" className='w-full' alt="" />
               </div>
               <div className='basis-1/2 pr-6 max-[992px]:pr-0 max-[992px]:mb-5 max-[992px]:text-2xl'>
-                <p className='text-grey-custom2 text-2xl'>Although it doesn't bring too many values like a university certificate. But it shows how I tried when I began to learn about front-end development.  I am proud of it.  And As well as it is a good start in the road to being a good developer</p>
+                <p className='text-grey-custom2 text-2xl ml-5'>Although it doesn't bring too many values like a university certificate. But it shows how I tried when I began to learn about front-end development.  I am proud of it.  And As well as it is a good start in the road to being a good developer</p>
               </div>
             </div>
           </div>
@@ -282,7 +282,7 @@ function App() {
         <a href="https://www.facebook.com/tainguyen201523" target={'_blank'}><AiFillFacebook className='text-2xl text-grey-custom2 mb-3' /></a>
       </div>
       <div className=" email-contact flex flex-col items-center fixed right-10 bottom-0 after:content-[''] after:h-28 after:w-1 after:bg-grey-custom2 max-[992px]:hidden">
-        <a href="" className='mb-2 text-grey-custom2' style={{ writingMode: 'vertical-rl' }}>tainguyen201507021@gmail.com</a>
+        <a href="mailto:tainguyen201507021@gmail.com" className='mb-2 text-grey-custom2' style={{ writingMode: 'vertical-rl' }}>tainguyen201507021@gmail.com</a>
       </div>
     </>
 
