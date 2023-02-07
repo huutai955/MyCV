@@ -72,7 +72,7 @@ function App() {
               }}><span>Contact</span></li>
             </Fade>
             <Fade direction='down' delay={700}>
-              <li className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700'><button>Remuse</button></li>
+              <li className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700'><a  href='https://www.topcv.vn/xem-cv/V1NRA1kGVlAOUlUGDVMAAlZUAgcHVVNUV1sNUQadb1' target={'_blank'} className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700'>Remuse</a></li>
             </Fade>
           </ul>
         </div>
