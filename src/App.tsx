@@ -72,23 +72,33 @@ function App() {
               }}><span>Contact</span></li>
             </Fade>
             <Fade direction='down' delay={700}>
-              <li className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700'><a  href='https://www.topcv.vn/xem-cv/V1NRA1kGVlAOUlUGDVMAAlZUAgcHVVNUV1sNUQadb1' target={'_blank'} className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700'>Remuse</a></li>
+              <li className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700'><a href='https://www.topcv.vn/xem-cv/V1NRA1kGVlAOUlUGDVMAAlZUAgcHVVNUV1sNUQadb1' target={'_blank'} className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700'>Remuse</a></li>
             </Fade>
           </ul>
         </div>
       </div>
 
       <div className="bg-dark-navy py-20 px-24 max-[768px]:px-2">
-        <div className="container max-[768px]:px-2">
-          <Fade delay={200}>
-            <p className='text-hover-color mb-6 max-[768px]:max-w-xs  '>Hi, my name is</p>
-          </Fade>
-          <Fade delay={800}>
-            <h2 className='text-grey-custom text-6xl mb-4  '>Nguyen Huu Tai.</h2>
-          </Fade>
-          <Fade delay={1300}>
-            <h2 className='text-grey-custom2 text-5xl mb-4 max-[680px]:text-4xl '>I am Front-end Developer.</h2>
-          </Fade>
+        <div className="container max-[768px]:px-2 flex items-center max-[992px]:flex-col">
+          <div className='basis-3/4'>
+            <Fade delay={200}>
+              <p className='text-hover-color mb-6 max-[768px]:max-w-xs  '>Hi, my name is</p>
+            </Fade>
+            <Fade delay={800}>
+              <h2 className='text-grey-custom text-6xl mb-4  '>Nguyen Huu Tai.</h2>
+            </Fade>
+            <Fade delay={1300}>
+              <h2 className='text-grey-custom2 text-5xl mb-4 max-[680px]:text-4xl '>I am Front-end Developer.</h2>
+            </Fade>
+          </div>
+          <div className='basis-1/4 text-center max-[992px]:w-64'>
+             <Slide direction='right'>
+             <img className='w-full brightness-50 hover:brightness-75 cursor-pointer duration-700' src="./img/avatar.jpg" alt="" />
+              <a href='https://www.topcv.vn/xem-cv/V1NRA1kGVlAOUlUGDVMAAlZUAgcHVVNUV1sNUQadb1' target={'_blank'} className='text-dark-navy font-bold inline-block mt-5 border-2 py-3 px-2 rounded-xl bg-grey-custom2 hover:bg-grey-custom duration-700'>
+                Check Out My CV
+              </a>
+             </Slide>
+          </div>
         </div>
       </div>
       <Drawer placement="right" onClose={onClose} closeIcon={false} open={open} style={{ background: '#020c1b', color: '#fff' }}>
@@ -240,7 +250,7 @@ function App() {
       </div>
 
       <div className="certificate bg-dark-navy py-20">
-      <Fade delay={500}>
+        <Fade delay={500}>
           <div className="container">
             <h2 className='text-4xl text-grey-custom font-bold  mb-10'>My Certificate.</h2>
             <div className='flex items-center max-[992px]:flex-col-reverse'>
@@ -252,7 +262,7 @@ function App() {
               </div>
             </div>
           </div>
-      </Fade>
+        </Fade>
       </div>
 
       <div ref={elementRefContact} className="contact bg-dark-navy px-24 py-24 max-[768px]:px-2">
