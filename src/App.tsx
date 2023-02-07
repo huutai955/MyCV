@@ -53,7 +53,7 @@ function App() {
     <>
       <div className="header relative bg-navy  py-5">
         <div className="container flex justify-between px-12  max-[768px]:flex-row-reverse">
-          <h2>LOGO</h2>
+          <h2 className='font-serif text-3xl text-grey-custom'>Portfolio</h2>
           <span className='text-3xl cursor-pointer 768px:hidden' onClick={showDrawer}><AiOutlineMenuUnfold /></span>
           <ul className='flex gap-8 max-[768px]:hidden'>
             <Fade direction='down' delay={100}>
