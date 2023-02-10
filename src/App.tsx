@@ -93,8 +93,8 @@ function App() {
           </div>
           <div className='basis-1/4 text-center max-[992px]:w-64'>
              <Slide direction='right'>
-             <img className='w-full brightness-50 hover:brightness-75 cursor-pointer duration-700' src="./img/avatar.jpg" alt="" />
-              <a href='https://www.topcv.vn/xem-cv/V1NRA1kGVlAOUlUGDVMAAlZUAgcHVVNUV1sNUQadb1' target={'_blank'} className='text-dark-navy font-bold inline-block mt-5 border-2 py-3 px-2 rounded-xl bg-grey-custom2 hover:bg-grey-custom duration-700'>
+             <img className='w-full brightness-50 hover:brightness-75 cursor-pointer duration-700 rounded-md' src="./img/avatar.jpg" alt="" />
+              <a href='./filecv/CV_Nguyen_Huu_Tai.pdf' target={'_blank'} download className='text-dark-navy font-bold inline-block mt-5 border-2 py-3 px-2 rounded-xl bg-grey-custom2 hover:bg-grey-custom duration-700'>
                 Check Out My CV
               </a>
              </Slide>
