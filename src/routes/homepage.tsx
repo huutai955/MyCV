@@ -3,7 +3,7 @@ import { AiOutlineGithub, AiFillInstagram, AiFillFacebook, AiOutlineMenuUnfold, 
 import { Drawer } from 'antd';
 import ScrollToTop from 'react-scroll-to-top';
 import { Fade, Slide } from 'react-awesome-reveal';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -135,7 +135,7 @@ function HomePage() {
               </ul>
             </div>
             <p className='text-grey-custom2 text-lg mb-5'>These are a few technologies related to Back-end I have learned since August 2023 now to build a REST API.</p>
-            <div className='flex'>
+            <div className='flex mb-3'>
               <ul className='basis-1/3 text-ce'>
                 <li className='text-grey-custom mb-2'>ExpressJS</li>
                 <li className='text-grey-custom mb-2'>Sequelize</li>
@@ -143,6 +143,9 @@ function HomePage() {
                 <li className='text-grey-custom mb-2'>JWT</li>
               </ul>
             </div>
+            <h2 className='text-grey-custom text-2xl font-bold'>Experience</h2>
+            <p className='text-grey-custom2'>Front-end Developer at UnikCore Company (Full-time). From April 2023 to now.</p>
+
           </Fade>
         </div>
       </div>
@@ -159,9 +162,8 @@ function HomePage() {
                 {/* Mobile */}
                 <a href='https://vercel.com/huutai955/nguyen-huu-tai-bootcamp33-typescript-capstone' target={'_blank'} className='absolute bg-navy hidden top-0 bottom-0 right-0 left-0 max-[992px]:block p-2'>
                   <p className='text-hover-color'>Featured Project</p>
-                  <h2 className='text-grey-custom text-2xl'>Jira Clone Project</h2>
-                  <p className='text-grey-custom2'>Here is my project to finish the course at CyberSoft.I made some features like creating the project and controlling the project's tasks.You can check some features in project with this account:  <br /> email: tainguyentestjira1@gmail.com
-                    <br /> password: 123456</p>
+                  <h2 className='text-grey-custom text-2xl'>Unikcore Project</h2>
+                  <p className='text-grey-custom2'>This is the first real-world project I have ever worked on. It is a product created to manage sales, marketing, and customer care systems for various industries. <Link to={'/project'}>Click here for more information</Link></p>
                   <h2 className=' 992px:text-base 1024px:text-xl font-medium text-grey-custom'>A few libraries and frameworks that I use in this project: </h2>
                   <div className='flex 1024px:justify-start 992px:justify-end'>
                     <ul className='basis-1/3'>
@@ -184,8 +186,7 @@ function HomePage() {
                 <p className='text-hover-color text-end'>Featured Project</p>
                 <h2 className='text-grey-custom text-2xl text-end'>Unikcore Project</h2>
                 <div className='p-4 992px:w-4/5 992px:relative 992px:left-1/4 992px:text-xs 1024px:left-0 1024px:w-full' style={{ backgroundColor: '#112240', boxShadow: '0 10px 30px -15px var(--navy-shadow)' }}>
-                  <p className='text-grey-custom2 max-w-md  992px:text-xs 1024px:text-lg'>This is the first real-world project I have ever worked on. It is a product created to manage sales, marketing, and customer care systems for various industries. I feel quite fortunate to have been involved in the project during the company's restructuring of the front-end of the product. Consequently, I have learned a lot from this project.
-                    This is some information about this project.</p>
+                  <p className='text-grey-custom2 max-w-md  992px:text-xs 1024px:text-lg'>This is the first real-world project I have ever worked on. It is a product created to manage sales, marketing, and customer care systems for various industries. <Link to={'/project'}>Click here for more information</Link></p>
                 </div>
                 <h2 className='text-end 992px:text-base 1024px:text-xl font-medium text-grey-custom'>A few libraries and frameworks that I use in this project: </h2>
                 <div className='flex 1024px:justify-start 992px:justify-end'>
@@ -215,7 +216,7 @@ function HomePage() {
 
 
 
-      <div ref={elementRefContact} className="contact bg-dark-navy px-24 py-24 max-[768px]:px-2">
+      <div ref={elementRefContact} className="contact bg-dark-navy px-24 max-[768px]:px-2">
         <div className="container max-[768px]:px-2 text-grey-custom text-end" >
           <h2 className='text-3xl font-bold mb-5'>Contact</h2>
           <p>You can contact to me through:</p>

@@ -22,7 +22,7 @@ export default function Project({ }: Props) {
                 <p className="text-xl text-white mb-3">This is the first real-world project I have ever worked on. It is a product created to manage sales, marketing, and customer care systems for various industries. I feel quite fortunate to have been involved in the project during the company's restructuring of the front-end of the product. Consequently, I have learned a lot from this project.
                     This is some information about this project.
                 </p>
-                <p className="text-white text-xl">A few libraries and frameworks that be used in this project:</p>
+                <p className="text-grey-custom text-xl">I. A few libraries and frameworks that be used in this project:</p>
                 <div className="flex gap-11 mb-3">
                     <ul className="text-white">
                         <li>NextJS</li>
@@ -40,7 +40,8 @@ export default function Project({ }: Props) {
                         <li>React BeautifulDND</li>
                     </ul>
                 </div>
-                <p className="text-white text-xl">Due to some confidential information and the company's product has not been released to the market, I cannot disclose the source code. Therefore, I will describe some features I have implemented using images permitted by the company.</p>
+                <p className="text-grey-custom text-xl">II. Due to some confidential information and the company's product has not been released to the market, I cannot disclose the source code. Therefore, I will describe some features I have implemented using images permitted by the company. This is some features i did during working at company:</p>
+                
                 <div className="flex flex-col gap-4">
                     <p className="text-white">1.Create components for reusing in whole project.</p>
                     <p className="text-white">2.Create layout sidebar for app</p>
