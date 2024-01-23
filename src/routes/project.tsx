@@ -41,8 +41,8 @@ export default function Project({ }: Props) {
                     </ul>
                 </div>
                 <p className="text-grey-custom text-xl">II. Due to some confidential information and the company's product has not been released to the market, I cannot disclose the source code. Therefore, I will describe some features I have implemented using images permitted by the company. This is some features i did during working at company:</p>
-                
-                <div className="flex flex-col gap-4">
+
+                <div className="flex flex-col gap-4 mb-4">
                     <p className="text-white">1.Create components for reusing in whole project.</p>
                     <p className="text-white">2.Create layout sidebar for app</p>
                     <p className="text-white">3.Handling login/logout and maintain login with access token, refresh token.</p>
@@ -65,8 +65,8 @@ export default function Project({ }: Props) {
                     <Image className="cursor-zoom-out" src="/img/refactor1.jpg" width={1000} height={500} alt="" handleClickImg={handleClickImg} />
                     <Image className="cursor-zoom-out" src="/img/refactor2.jpg" width={1000} height={500} alt="" handleClickImg={handleClickImg} />
                     <Image className="cursor-zoom-out" src="/img/refactor3.jpg" width={1000} height={500} alt="" handleClickImg={handleClickImg} />
-
                 </div>
+                <p className="text text-grey-custom text-xl">This is all features i did during worked at company. Thanks for reading and hope you to like it. Looking forward to hearing from you - Nguyen Huu Tai.</p>
             </div>
             <Modal
                 centered

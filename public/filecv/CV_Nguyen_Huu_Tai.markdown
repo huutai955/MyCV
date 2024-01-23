@@ -67,4 +67,4 @@ Due to some confidential information and the company's product has not been rele
 
 ## 🙏🏻Thanks!
 
-> Looking forward to hearing from you - Du Thanh Duoc
+> Looking forward to hearing from you - Nguyen Huu Tai
