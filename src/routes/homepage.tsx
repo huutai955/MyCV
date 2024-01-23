@@ -1,22 +1,22 @@
 import { useEffect, useState, useRef } from 'react'
-import reactLogo from './assets/react.svg'
 import { AiOutlineGithub, AiFillInstagram, AiFillFacebook, AiOutlineMenuUnfold, AiOutlineClose } from "react-icons/ai";
-import { Button, Drawer } from 'antd';
-import { Fade, Slide, Flip } from "react-awesome-reveal";
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import ScrollToTop from "react-scroll-to-top";
+import { Drawer } from 'antd';
+import ScrollToTop from 'react-scroll-to-top';
+import { Fade, Slide } from 'react-awesome-reveal';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 
-function App() {
+function HomePage() {
   const [opacity, setOpacity] = useState<number>(1)
   const [open, setOpen] = useState(false);
   const [height, setHeight] = useState<number>(1)
   const elementRefAbout = useRef<HTMLDivElement>(null)
   const elementRefWork = useRef<HTMLDivElement>(null)
   const elementRefContact = useRef<HTMLDivElement>(null)
+  const navigate = useNavigate()
 
   const scrollToElement = (element: any) => {
     element.current?.scrollIntoView()
@@ -56,22 +56,22 @@ function App() {
           <h2 className='font-serif text-3xl text-grey-custom'>Portfolio</h2>
           <span className='text-3xl cursor-pointer 768px:hidden' onClick={showDrawer}><AiOutlineMenuUnfold /></span>
           <ul className='flex gap-8 max-[768px]:hidden'>
-            <Fade direction='down' delay={100}>
+            <Fade triggerOnce={true} direction='down' delay={100}>
               <li className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700' onClick={() => {
                 scrollToElement(elementRefAbout)
               }}><span>About</span></li>
             </Fade>
-            <Fade direction='down' delay={300}>
+            <Fade triggerOnce={true} direction='down' delay={300}>
               <li className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700' onClick={() => {
                 scrollToElement(elementRefWork)
               }}><span>Work</span></li>
             </Fade>
-            <Fade direction='down' delay={500}>
+            <Fade triggerOnce={true} direction='down' delay={500}>
               <li className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700' onClick={() => {
                 scrollToElement(elementRefContact)
               }}><span>Contact</span></li>
             </Fade>
-            <Fade direction='down' delay={700}>
+            <Fade triggerOnce={true} direction='down' delay={700}>
               <li className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700'><a href='https://www.topcv.vn/xem-cv/V1NRA1kGVlAOUlUGDVMAAlZUAgcHVVNUV1sNUQadb1' target={'_blank'} className='font-normal cursor-pointer text-grey-custom hover:text-hover-color duration-700'>Remuse</a></li>
             </Fade>
           </ul>
@@ -81,23 +81,23 @@ function App() {
       <div className="bg-dark-navy py-20 px-24 max-[768px]:px-2">
         <div className="container max-[768px]:px-2 flex items-center max-[992px]:flex-col">
           <div className='basis-3/4'>
-            <Fade delay={200}>
+            <Fade triggerOnce={true} delay={200}>
               <p className='text-hover-color mb-6 max-[768px]:max-w-xs  '>Hi, my name is</p>
             </Fade>
-            <Fade delay={800}>
+            <Fade triggerOnce={true} delay={800}>
               <h2 className='text-grey-custom text-6xl mb-4  '>Nguyen Huu Tai.</h2>
             </Fade>
-            <Fade delay={1300}>
+            <Fade triggerOnce={true} delay={1300}>
               <h2 className='text-grey-custom2 text-5xl mb-4 max-[680px]:text-4xl '>I am Front-end Developer.</h2>
             </Fade>
           </div>
           <div className='basis-1/4 text-center max-[992px]:w-64'>
-             <Slide direction='right'>
-             <img className='w-full brightness-50 hover:brightness-75 cursor-pointer duration-700 rounded-md' src="./img/avatar.jpg" alt="" />
+            <Slide triggerOnce={true} direction='right'>
+              <img className='w-full brightness-50 hover:brightness-75 cursor-pointer duration-700 rounded-md' src="./img/avatar.jpg" alt="" />
               <a href='./filecv/CV_Nguyen_Huu_Tai.pdf' target={'_blank'} download className='text-dark-navy font-bold inline-block mt-5 border-2 py-3 px-2 rounded-xl bg-grey-custom2 hover:bg-grey-custom duration-700'>
                 Check Out My CV
               </a>
-             </Slide>
+            </Slide>
           </div>
         </div>
       </div>
@@ -109,41 +109,53 @@ function App() {
           <li> <a href=""><span className='text-grey-custom text-2xl'>Contact</span></a></li>
           <li> <a href=""><span className='text-grey-custom text-2xl'>Remuse</span></a></li>
         </ul>
-
       </Drawer>
 
       <div ref={elementRefAbout} className="aboutme bg-dark-navy pb-24 px-24 max-[768px]:px-2">
         <div className="container max-[768px]:px-2">
-          <Fade delay={1700}>
+          <Fade triggerOnce={true} delay={1700}>
             <h2 className='text-grey-custom text-2xl font-bold'>About Me</h2>
-            <p className='text-grey-custom2 text-lg mb-5'>Hello! My name is Nguyễn Hữu Tài, I am 21 years old. I have started to know about information technology since 09/2021. In the learning process, I began to know about web development and I have learned about it for about 6 - 7 months. Now, I am learning about front-end and in the future, I will start to learn about back-end to improve myself and try to be a full-stack developer.</p>
+            <p className='text-grey-custom2 text-lg mb-5'>Hello! My name is Nguyễn Hữu Tài, I am 22 years old. I have started to know about information technology since 09/2021. In the learning process, I began to know about web development and I have learned about it for about 8 - 9 months. From April 2023 to now, I am developer at unikcore as front end developer.</p>
             <p className='text-grey-custom2 text-lg mb-5'>These are a few technologies related to Front-end I have learned since 2022 now.</p>
             <div className='flex'>
               <ul className='basis-1/3 text-ce'>
                 <li className='text-grey-custom mb-2'>Javascript</li>
-                <li className='text-grey-custom mb-2'>ReactJS</li>
                 <li className='text-grey-custom mb-2'>TypeScript</li>
+                <li className='text-grey-custom mb-2'>ReactJS</li>
+                <li className='text-grey-custom mb-2'>NextJS</li>
                 <li className='text-grey-custom mb-2'>Redux (Redux-toolkit)</li>
+                <li className='text-grey-custom mb-2'>Tanstack Query</li>
               </ul>
               <ul className='basis-1/3 text-ce'>
                 <li className='text-grey-custom mb-2'>Bootstrap</li>
                 <li className='text-grey-custom mb-2'>SASS</li>
+                <li className='text-grey-custom mb-2'>Tailwind</li>
                 <li className='text-grey-custom mb-2'>ANTD</li>
+                <li className='text-grey-custom mb-2'>Marterial UI</li>
+              </ul>
+            </div>
+            <p className='text-grey-custom2 text-lg mb-5'>These are a few technologies related to Back-end I have learned since August 2023 now to build a REST API.</p>
+            <div className='flex'>
+              <ul className='basis-1/3 text-ce'>
+                <li className='text-grey-custom mb-2'>ExpressJS</li>
+                <li className='text-grey-custom mb-2'>Sequelize</li>
+                <li className='text-grey-custom mb-2'>My SQL</li>
+                <li className='text-grey-custom mb-2'>JWT</li>
               </ul>
             </div>
           </Fade>
         </div>
       </div>
-
-
       <div ref={elementRefWork} className="myproject bg-dark-navy py-24  px-24 max-[992px]:p-0">
         <div className="container max-[680px]:px-3">
           <h2 className='text-3xl font-bold text-grey-custom2 mb-7'>Some Thing I've Build</h2>
           <div className="project1 flex relative mb-40 items-center py-24">
             <Slide direction='left' className='basis-2/3 relative max-[992px]:basis-full'>
-              <div >
-                <img src="./img/project1.png" className='max-[680px]:h-400px' alt="" />
-                <a href="https://nguyen-huu-tai-bootcamp33-typescript-capstone.vercel.app/" target={'_blank'} className='absolute top-0 right-0 left-0 bottom-0 opacity-70 hover:opacity-0 duration-700 max-[992px]:hidden' style={{ backgroundColor: '#1d4652' }}></a>
+              <div className='cursor-pointer' onClick={() => {
+                navigate('/project')
+              }}>
+                <img src="./img/pho1.jpg" className='max-[680px]:h-400px' alt="" />
+                <a target={'_blank'} className='absolute top-0 right-0 left-0 bottom-0 opacity-70 hover:opacity-0 duration-700 max-[992px]:hidden' style={{ backgroundColor: '#1d4652' }}></a>
                 {/* Mobile */}
                 <a href='https://vercel.com/huutai955/nguyen-huu-tai-bootcamp33-typescript-capstone' target={'_blank'} className='absolute bg-navy hidden top-0 bottom-0 right-0 left-0 max-[992px]:block p-2'>
                   <p className='text-hover-color'>Featured Project</p>
@@ -170,100 +182,38 @@ function App() {
             <Slide className='basis-1/3 absolute right-0 max-[992px]:hidden' direction='right'>
               <div>
                 <p className='text-hover-color text-end'>Featured Project</p>
-                <h2 className='text-grey-custom text-2xl text-end'>Jira Clone Project</h2>
+                <h2 className='text-grey-custom text-2xl text-end'>Unikcore Project</h2>
                 <div className='p-4 992px:w-4/5 992px:relative 992px:left-1/4 992px:text-xs 1024px:left-0 1024px:w-full' style={{ backgroundColor: '#112240', boxShadow: '0 10px 30px -15px var(--navy-shadow)' }}>
-                  <p className='text-grey-custom2 max-w-md  992px:text-xs 1024px:text-lg'>Here is my project to finish the course at CyberSoft.I made some features like creating the project and controlling the project's tasks.You can check some features in project with this account:  <br /> email: tainguyentestjira1@gmail.com
-                    <br /> password: 123456</p>
+                  <p className='text-grey-custom2 max-w-md  992px:text-xs 1024px:text-lg'>This is the first real-world project I have ever worked on. It is a product created to manage sales, marketing, and customer care systems for various industries. I feel quite fortunate to have been involved in the project during the company's restructuring of the front-end of the product. Consequently, I have learned a lot from this project.
+                    This is some information about this project.</p>
                 </div>
                 <h2 className='text-end 992px:text-base 1024px:text-xl font-medium text-grey-custom'>A few libraries and frameworks that I use in this project: </h2>
                 <div className='flex 1024px:justify-start 992px:justify-end'>
                   <ul className='basis-1/3'>
-                    <li className='text-grey-custom'>ReactJS</li>
+                    <li className='text-grey-custom'>NextJS</li>
+                    <li className='text-grey-custom'>Redux (Redux-toolkit)</li>
+                    <li className='text-grey-custom'>Tanstack Query</li>
                     <li className='text-grey-custom'>Antd</li>
-                    <li className='text-grey-custom'>Sass</li>
-                    <li className='text-grey-custom'>TypeScript</li>
+                    <li className='text-grey-custom'>TailwindCSS</li>
+                    <li className='text-grey-custom'>React BeautifulDND</li>
                   </ul>
                   <ul className='basis1/3'>
-                    <li className='text-grey-custom'>Redux (Redux-toolkit)</li>
-                    <li className='text-grey-custom'>Axios</li>
-                    <li className='text-grey-custom'>Formik and Yup</li>
+                    <li className='text-grey-custom'>SASS</li>
+                    <li className='text-grey-custom'>Formik</li>
+                    <li className='text-grey-custom'>Yup</li>
+                    <li className='text-grey-custom'>DayJS</li>
+                    <li className='text-grey-custom'>React ChartJS</li>
                   </ul>
                 </div>
               </div>
             </Slide>
           </div>
 
-          <div className="project2 flex relative items-center">
-            <Slide direction='left' className='basis-1/3 absolute z-10 max-[992px]:hidden'>
-              <div >
-                <p className='text-hover-color'>Featured Project</p>
-                <h2 className='text-grey-custom text-2xl '>Fiverr Clone Project</h2>
-                <div className='p-4 992px:w-4/5 992px:relative 1024px:left-0 1024px:w-full' style={{ backgroundColor: '#112240', boxShadow: '0 10px 30px -15px var(--navy-shadow)' }}>
-                  <p className='text-grey-custom2 max-w-md 992px:text-xs 1024px:text-lg'>Here is my project to finish the course at CyberSoft too. I made some features like finding freelancers and renting them to do something for you.You can check some features in project with this account:  <br /> email: tainguyen2015070212@gmail.com
-                    <br /> password: 123456</p>
-                </div>
-                <h2 className='text-xl font-medium text-grey-custom 992px:text-base'>A few libraries and frameworks that I use in this project: </h2>
-                <div className='flex'>
-                  <ul className='basis-1/3'>
-                    <li className='text-grey-custom'>ReactJS</li>
-                    <li className='text-grey-custom'>Material UI</li>
-                    <li className='text-grey-custom'>Sass</li>
-                    <li className='text-grey-custom'>TypeScript</li>
-                  </ul>
-                  <ul className='basis1/3'>
-                    <li className='text-grey-custom'>Redux (Redux-toolkit)</li>
-                    <li className='text-grey-custom'>Axios</li>
-                    <li className='text-grey-custom'>Formik and Yup</li>
-                  </ul>
-                </div>
-              </div>
-            </Slide>
-            <Slide direction='right' className='basis-2/3 relative max-[992px]:basis-full max-[992px]:left-0 max-[992px]:w-full left-33%'>
-              <div >
-                <img src="./img/project2.png" className='max-[680px]:h-400px' alt="" />
-                <a href="https://nguyen-huu-tai-type-script-fiverr.vercel.app/" target={'_blank'} className='absolute top-0 right-0 left-0 bottom-0 opacity-70 hover:opacity-0 duration-700' style={{ backgroundColor: '#1d4652' }}></a>
-                {/* Mobile */}
-                <a href='https://nguyen-huu-tai-type-script-fiverr.vercel.app/' target={'_blank'} className='absolute bg-navy hidden top-0 bottom-0 right-0 left-0 max-[992px]:block p-2'>
-                  <p className='text-hover-color'>Featured Project</p>
-                  <h2 className='text-grey-custom text-2xl'>Fiverr Clone Project</h2>
-                  <p className='text-grey-custom2'>Here is my project to finish the course at CyberSoft.I made some features like creating the project and controlling the project's tasks.You can check some features in project with this account:  <br /> email: tainguyentestjira1@gmail.com
-                    <br /> password: 123456</p>
-                  <h2 className=' 992px:text-base 1024px:text-xl font-medium text-grey-custom'>A few libraries and frameworks that I use in this project: </h2>
-                  <div className='flex 1024px:justify-start 992px:justify-end'>
-                    <ul className='basis-1/3'>
-                      <li className='text-grey-custom'>ReactJS</li>
-                      <li className='text-grey-custom'>Antd</li>
-                      <li className='text-grey-custom'>Sass</li>
-                      <li className='text-grey-custom'>TypeScript</li>
-                    </ul>
-                    <ul className='basis1/3'>
-                      <li className='text-grey-custom'>Redux (Redux-toolkit)</li>
-                      <li className='text-grey-custom'>Axios</li>
-                      <li className='text-grey-custom'>Formik and Yup</li>
-                    </ul>
-                  </div>
-                </a>
-              </div>
-            </Slide>
-          </div>
+
         </div>
       </div>
 
-      <div className="certificate bg-dark-navy py-20">
-        <Fade delay={500}>
-          <div className="container">
-            <h2 className='text-4xl text-grey-custom font-bold  mb-10'>My Certificate.</h2>
-            <div className='flex items-center max-[992px]:flex-col-reverse'>
-              <div className='basis-1/2'>
-                <img src="./img/certificate.png" className='w-full' alt="" />
-              </div>
-              <div className='basis-1/2 pr-6 max-[992px]:pr-0 max-[992px]:mb-5 max-[992px]:text-2xl'>
-                <p className='text-grey-custom2 text-2xl ml-5'>Although it doesn't bring too many values like a university certificate. But it shows how I tried when I began to learn about front-end development.  I am proud of it.  And As well as it is a good start in the road to being a good developer</p>
-              </div>
-            </div>
-          </div>
-        </Fade>
-      </div>
+
 
       <div ref={elementRefContact} className="contact bg-dark-navy px-24 py-24 max-[768px]:px-2">
         <div className="container max-[768px]:px-2 text-grey-custom text-end" >
@@ -299,4 +249,4 @@ function App() {
   )
 }
 
-export default App
+export default HomePage

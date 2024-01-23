@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
-  padding: 0 ;
-  margin: 0 ;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
@@ -15,4 +14,16 @@
   max-width: 1280px;
   margin: 0 auto !important;
   padding: 0 50px;
+}
+
+
+.show-image-modal-customize .ant-modal-content {
+  padding: 0;
+}
+
+.show-image-modal-customize .ant-modal-content .ant-modal-close {
+  position: fixed;
+  color: white;
+  top: 20;
+  right: 40px;
 }
